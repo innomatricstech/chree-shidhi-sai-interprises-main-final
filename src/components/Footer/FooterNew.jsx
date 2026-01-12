@@ -28,7 +28,14 @@ const FooterNew = () => {
               clients with excellent services in Karnataka and across India.
             </p>
             <p className="mb-1">Mobile Number: +91-9632676109</p>
-            <p>Email: mob9448334376@gmail.com</p>
+            <p>Email:   <a
+                href="mailto:info@shreechethanaservices.com"
+                className="hover:underline"
+              >
+                info@shreechethanaservices.com
+              </a>  
+
+            </p>
           </div>
 
           {/* Quick Links Column */}

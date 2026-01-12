@@ -95,10 +95,10 @@ const ContactBody = () => {
                   icon={faGlobeAsia}
                 />
                 <a
-                  href="mailto:mob9448334376@gmail.com"
+                  href="info@shreechethanaservices.com"
                   className="hover:underline"
                 >
-                  mob9448334376@gmail.com
+                  info@shreechethanaservices.com
                 </a>
               </div>
 

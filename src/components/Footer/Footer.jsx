@@ -50,10 +50,10 @@ const Footer = () => {
                 className="text-amber-400 mr-2"
               />
               <a
-                href="mailto:chethanaservices@gmail.com"
+                href="mailto:info@shreechethanaservices.com"
                 className="hover:underline"
               >
-                chethanaservices@gmail.com
+                info@shreechethanaservices.com
               </a>
             </div>
           </div>
