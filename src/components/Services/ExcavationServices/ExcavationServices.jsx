@@ -30,7 +30,7 @@ const services = [
     icon: <FaHardHat className="text-red-500 text-3xl" />,
     title: "Building Demolition & Dismantling",
     description:
-      "Complete demolition and dismantling services for concrete, RCC, industrial sheds, and interior strip-outs with strict safety protocols.",
+      "Complete demolition and dismantling services for concrete, Building demolition contractors Bengaluru, industrial sheds, and interior strip-outs with strict safety protocols.",
   },
   {
     icon: <FaMountain className="text-green-600 text-3xl" />,
