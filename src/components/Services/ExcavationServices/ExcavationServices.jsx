@@ -3,9 +3,7 @@ import { FaMountain, FaHammer, FaHardHat } from 'react-icons/fa';
 import { GiEarthCrack } from 'react-icons/gi';
 
 import exc from "../../../assets/services/SSSE14.png";
-import ExcavationHero from './ExcavationHero';
-import ExcavationText from './ExcavationText';
-import ContactBody from '../../Contact/ContactBody';
+ 
 
 const services = [
   {
