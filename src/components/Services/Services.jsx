@@ -1,8 +1,7 @@
 import React from 'react'
 import { Helmet } from "react-helmet-async";
 
-import ServicesHero from './ServicesHero'
-import ServicesHeroText from './ServicesHeroText'
+ 
 import ServiceBodyTwo from './ServiceBodyTwo'
 import ServiceContact from './ServiceContact'
 import Industry from './Industry/Industry'
@@ -59,8 +58,7 @@ C&D waste removal Bangalore
         />
       </Helmet>
 
-      
-      <ServicesHeroText/>
+    
       <ServiceBodyTwo/>
       <Industry/>
       <ServiceContact/>
