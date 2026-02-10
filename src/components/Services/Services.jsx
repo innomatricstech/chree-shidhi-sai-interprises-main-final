@@ -59,7 +59,7 @@ C&D waste removal Bangalore
         />
       </Helmet>
 
-      <ServicesHero/>
+      
       <ServicesHeroText/>
       <ServiceBodyTwo/>
       <Industry/>
