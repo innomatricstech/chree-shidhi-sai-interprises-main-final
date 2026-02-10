@@ -23,9 +23,10 @@ const GallerySection2 = () => {
         collection(db, "gallery"),
         orderBy("createdAt", "desc")
       );
-      const snapshot = await getDocs(q);
 
+      const snapshot = await getDocs(q);
       const images = snapshot.docs.map((doc) => doc.data().imageUrl);
+
       setGallery(images);
     } catch (error) {
       console.error("Error fetching gallery:", error);
@@ -42,12 +43,14 @@ const GallerySection2 = () => {
   const handleCloseModal = () => setCurrentIndex(null);
 
   const handlePrev = useCallback(() => {
+    if (!gallery.length) return;
     setCurrentIndex((prev) =>
       prev > 0 ? prev - 1 : gallery.length - 1
     );
   }, [gallery.length]);
 
   const handleNext = useCallback(() => {
+    if (!gallery.length) return;
     setCurrentIndex((prev) =>
       prev < gallery.length - 1 ? prev + 1 : 0
     );
@@ -71,6 +74,7 @@ const GallerySection2 = () => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (currentIndex === null) return;
+
       if (e.key === "ArrowLeft") handlePrev();
       if (e.key === "ArrowRight") handleNext();
       if (e.key === "Escape") handleCloseModal();
@@ -93,13 +97,14 @@ const GallerySection2 = () => {
   if (gallery.length === 0) {
     return (
       <div className="py-20 text-center text-gray-500">
-        No gallery images available
+        No gallery items available
       </div>
     );
   }
 
   return (
     <section className="container mx-auto px-4 py-8">
+
       {/* GRID */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {gallery.map((image, index) => (
@@ -110,7 +115,7 @@ const GallerySection2 = () => {
           >
             <img
               src={image}
-              alt={`Gallery image ${index + 1}`}
+              alt={`Gallery ${index + 1}`}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
           </div>
@@ -121,9 +126,10 @@ const GallerySection2 = () => {
       {currentIndex !== null && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
           <div className="relative max-w-5xl w-full h-full flex items-center justify-center">
+
             <img
               src={gallery[currentIndex]}
-              alt="Selected"
+              alt={`Gallery ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
@@ -153,9 +159,11 @@ const GallerySection2 = () => {
             >
               <ChevronRight size={24} />
             </button>
+
           </div>
         </div>
       )}
+
     </section>
   );
 };

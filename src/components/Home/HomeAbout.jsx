@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import aboutImg2 from "../../assets/aboutImg2.jpg"
-import { FaBuilding, FaTools, FaTrash, FaHammer } from 'react-icons/fa';
+ 
 const HomeAbout = () => {
   return (
     <div className=" bg-gray-50 mx-auto px-4 py-10 ">

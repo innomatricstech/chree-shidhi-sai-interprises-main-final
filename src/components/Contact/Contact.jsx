@@ -1,9 +1,6 @@
 import React from 'react';
 // import './Contact.css';
-import ContactForm from './ContactForm';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+ 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ContactHero from './ContactHero';

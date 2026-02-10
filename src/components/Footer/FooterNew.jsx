@@ -8,72 +8,87 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/logo11.png";
 
 const FooterNew = () => {
   const handleClick = () => {
-    window.scrollTo({ behavior: "smooth", top: 0 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="bg-zinc-950 text-white py-8 mt-8">
       <div className="container mx-auto px-4">
+
+        {/* ================= GRID SECTION ================= */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Us Column */}
+
+          {/* ABOUT */}
           <div>
             <h1 className="text-xl font-bold mb-4">ABOUT</h1>
-            <div className="bg-yellow-500 flex w-full h-[1px]    justify-start items-start"></div>
-            <p className="mb-2 mt-3">
+            <div className="bg-yellow-500 w-full h-[1px]" />
+
+            <p className="mt-3 mb-2">
               Established in 1994, Shree Chethan Services has been providing our
               clients with excellent services in Karnataka and across India.
             </p>
-            <p className="mb-1">Mobile Number: +91-9632676109</p>
-            <p>Email:   <a
+
+            <p className="mb-1">
+              Mobile Number:{" "}
+              <a href="tel:+919632676109" className="hover:underline">
+                +91-9632676109
+              </a>
+            </p>
+
+            <p>
+              Email:{" "}
+              <a
                 href="mailto:info@shreechethanaservices.com"
                 className="hover:underline"
               >
                 info@shreechethanaservices.com
-              </a>  
-
+              </a>
             </p>
           </div>
 
-          {/* Quick Links Column */}
+          {/* QUICK LINKS */}
           <div>
             <h1 className="text-xl font-bold mb-4">QUICK LINKS</h1>
-            <div className="bg-yellow-500 flex w-full h-[1px] justify-start items-start"></div>
-            <ul className="space-y-2 mt-3">
-              {["Home", "About Us", "Project", "Contact Us"].map((item) => (
-                <li key={item} className="list-disc">
+            <div className="bg-yellow-500 w-full h-[1px]" />
+
+            <ul className="space-y-2 mt-3 list-disc ml-4">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/aboutus" },
+                { name: "Project", path: "/project" },
+                { name: "Contact Us", path: "/contactus" },
+              ].map((item) => (
+                <li key={item.name}>
                   <Link
+                    to={item.path}
                     onClick={handleClick}
-                    to={`/${item.toLowerCase().replace(" ", "")}`}
                     className="hover:text-amber-400 transition duration-300"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services Column */}
+          {/* SERVICES */}
           <div>
             <h1 className="text-xl font-bold mb-4">SERVICES</h1>
-            <div className="bg-yellow-500 flex w-full h-[1px] justify-start items-start"></div>
-            <ul className="space-y-2 mt-3">
+            <div className="bg-yellow-500 w-full h-[1px]" />
+
+            <ul className="space-y-2 mt-3 list-disc ml-4">
               {[
                 { name: "Excavation Services", path: "/excavation" },
-                {
-                  name: "Demolition/Dismantling Services",
-                  path: "/demolition",
-                },
+                { name: "Demolition/Dismantling Services", path: "/demolition" },
                 { name: "Site Preparations", path: "/siteprep" },
               ].map((service) => (
-                <li key={service.name} className="list-disc">
+                <li key={service.name}>
                   <Link
-                    onClick={handleClick}
                     to={service.path}
+                    onClick={handleClick}
                     className="hover:text-amber-400 transition duration-300"
                   >
                     {service.name}
@@ -83,10 +98,11 @@ const FooterNew = () => {
             </ul>
           </div>
 
-          {/* Location Column */}
+          {/* LOCATION */}
           <div className="flex flex-col">
             <h3 className="text-xl font-bold mb-4 uppercase">Location</h3>
-            <div className="bg-yellow-500 flex w-full h-[1px] justify-start items-start"></div>
+            <div className="bg-yellow-500 w-full h-[1px]" />
+
             <div className="rounded-md overflow-hidden shadow-lg mt-3">
               <iframe
                 title="Google Map Location"
@@ -94,58 +110,75 @@ const FooterNew = () => {
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
-                allowFullScreen=""
                 loading="lazy"
+                allowFullScreen
               ></iframe>
             </div>
           </div>
+
         </section>
 
-        {/* Social Media Icons */}
-        <div className="mt-8 flex justify-center space-x-4">
+        {/* ================= SOCIAL ================= */}
+        <div className="mt-8 flex justify-center items-center space-x-4">
+
           <a
-            href="#"
-            className="text-white hover:text-amber-400 transition duration-300"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-400"
           >
             <FontAwesomeIcon icon={faFacebook} size="lg" />
           </a>
-          <div className="bg-yellow-500 flex  w-[1px] h-auto justify-start items-start"></div>
+
+          <div className="bg-yellow-500 w-[1px] h-5" />
+
           <a
-            href="#"
-            className="text-white hover:text-amber-400 transition duration-300"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-400"
           >
             <FontAwesomeIcon icon={faInstagram} size="lg" />
           </a>
-          <div className="bg-yellow-500 flex  w-[1px] h-auto justify-start items-start"></div>
+
+          <div className="bg-yellow-500 w-[1px] h-5" />
+
           <a
-            href="#"
-            className="text-white hover:text-amber-400 transition duration-300"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-400"
           >
             <FontAwesomeIcon icon={faTwitter} size="lg" />
           </a>
-          <div className="bg-yellow-500 flex w-[1px] h-auto justify-start items-start"></div>
+
+          <div className="bg-yellow-500 w-[1px] h-5" />
+
           <a
-            href="#"
-            className="text-white hover:text-amber-400 transition duration-300"
+            href="https://wa.me/919632676109"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-400"
           >
             <FontAwesomeIcon icon={faWhatsapp} size="lg" />
           </a>
-          <div className="bg-yellow-500 flex w-[1px] h-auto justify-start items-start"></div>
+
+          <div className="bg-yellow-500 w-[1px] h-5" />
+
           <a
-            href="#"
-            className="text-white hover:text-amber-400 transition duration-300"
+            href="mailto:info@shreechethanaservices.com"
+            className="hover:text-amber-400"
           >
             <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
           </a>
+
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 text-center text-sm">
-          © {new Date().getFullYear()} Shree Chethan Services. All rights
-          reserved.
-          <div className="mt-2">
-          </div>
+        {/* ================= COPYRIGHT ================= */}
+        <div className="mt-8 text-center text-sm text-gray-400">
+          © {new Date().getFullYear()} Shree Chethan Services. All rights reserved.
         </div>
+
       </div>
     </footer>
   );

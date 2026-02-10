@@ -1,10 +1,7 @@
 import React from 'react';
 import { FaBuilding, FaTools, FaTrash, FaHammer } from 'react-icons/fa';
 import demolitionImage from "../../../assets/demolition.webp";
-import DemolitionHero from "./DemolitionHero";
-import DemolitionText from "./DemolitionText";
-import ServiceContact from '../ServiceContact';
-import ContactBody from '../../Contact/ContactBody';
+ 
 
 const services = [
   {

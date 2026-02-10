@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaTree, FaMapMarkedAlt, FaEarthAfrica, FaAccessibleIcon, FaTruckLoading } from 'react-icons/fa';
+import { FaTree, FaMapMarkedAlt,   FaTruckLoading } from 'react-icons/fa';
 import sitePreparationImage from "../../../assets/sitePreparation.jpg";
-import SitePreparationsHero from './SitePreparationsHero';
+ 
 import SitePreparationsText from './SitePreparationsText';
 import ContactBody from '../../Contact/ContactBody';
 

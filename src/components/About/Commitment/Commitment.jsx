@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaHardHat, FaProjectDiagram, FaUsers, FaRocket, FaHandshake, FaShieldAlt, FaMedal, FaTrophy } from 'react-icons/fa';
+import {   FaHandshake, FaShieldAlt, FaMedal,   } from 'react-icons/fa';
 
 const Commitment = () => {
   return (

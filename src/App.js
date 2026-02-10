@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+ 
 import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
+ 
 } from "react-router-dom";
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+ 
 import ExcavationServices from './components/Services/ExcavationServices/ExcavationServices';
 import DemolitionDismantle from './components/Services/DemolitionDismantle/DemolitionDismantle';
 import SitePreparations from './components/Services/SitePreparations/SitePreparations';
