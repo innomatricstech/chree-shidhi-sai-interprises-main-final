@@ -1,0 +1,9 @@
+/* Add this to your CSS file */
+.control-arrow {
+    color: #ff5722; /* Change this to your desired color */
+  }
+  
+  .control-arrow:hover {
+    color: #e64a19; /* Optional: Color on hover */
+  }
+  

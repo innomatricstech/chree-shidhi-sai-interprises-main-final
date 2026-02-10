@@ -1,0 +1,36 @@
+import React from 'react';
+// import './Contact.css';
+import ContactForm from './ContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ContactHero from './ContactHero';
+import ContactText from './ContactText';
+import ContactBody from './ContactBody';
+AOS.init();
+
+const Contact = () => {
+  return (
+    <>
+      <ContactHero />
+      <ContactText />
+      <ContactBody />
+      <div className="">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.719230584889!2d77.57209037538163!3d12.989801387327244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae170030771e61%3A0x1bd7dec2a9f95f09!2sChethan%20Cinemas!5e0!3m2!1sen!2sin!4v1739516411249!5m2!1sen!2sin"
+          width="1600"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Maps Embed"
+        ></iframe>
+      </div>
+    </>
+  );
+};
+
+export default Contact;
