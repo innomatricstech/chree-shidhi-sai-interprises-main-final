@@ -121,7 +121,7 @@ const ExcavationServices = () => {
         </div>
       </section>
 
-      <ContactBody />
+     
 
     </div>
   );
