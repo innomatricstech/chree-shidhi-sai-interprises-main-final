@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
-  faTwitter,
+   
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
@@ -121,8 +121,9 @@ const FooterNew = () => {
         {/* ================= SOCIAL ================= */}
         <div className="mt-8 flex justify-center items-center space-x-4">
 
+          {/* Facebook */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/share/1BcqwAvW2M/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-amber-400"
@@ -132,8 +133,9 @@ const FooterNew = () => {
 
           <div className="bg-yellow-500 w-[1px] h-5" />
 
+          {/* Instagram */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/shreechethanaservices/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-amber-400"
@@ -143,17 +145,11 @@ const FooterNew = () => {
 
           <div className="bg-yellow-500 w-[1px] h-5" />
 
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-amber-400"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="lg" />
-          </a>
-
+          {/* Twitter (optional) */}
+       
           <div className="bg-yellow-500 w-[1px] h-5" />
 
+          {/* WhatsApp */}
           <a
             href="https://wa.me/919632676109"
             target="_blank"
@@ -165,6 +161,7 @@ const FooterNew = () => {
 
           <div className="bg-yellow-500 w-[1px] h-5" />
 
+          {/* Email */}
           <a
             href="mailto:info@shreechethanaservices.com"
             className="hover:text-amber-400"
